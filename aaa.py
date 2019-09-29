@@ -16,12 +16,10 @@ class Ui_MainWindow(object):
         MainWindow.resize(800, 600)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
-        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton.setGeometry(QtCore.QRect(250, 260, 112, 34))
-        self.pushButton.setObjectName("pushButton")
-        self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_2.setGeometry(QtCore.QRect(480, 220, 112, 34))
-        self.pushButton_2.setObjectName("pushButton_2")
+        self.webEngineView = QWebEngineView(self.centralwidget)
+        self.webEngineView.setGeometry(QtCore.QRect(230, 100, 451, 371))
+        self.webEngineView.setUrl(QtCore.QUrl("http://www.4399.com/"))
+        self.webEngineView.setObjectName("webEngineView")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 30))
@@ -37,5 +35,5 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.pushButton.setText(_translate("MainWindow", "PushButton"))
-        self.pushButton_2.setText(_translate("MainWindow", "PushButton"))
+
+from PyQt5.QtWebEngineWidgets import *
